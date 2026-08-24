@@ -14,6 +14,8 @@ export default defineConfig(() => {
     ],
 
     build: {
+      distDir: 'dist/spa', // <--- DEFINE A PASTA DE SAÍDA
+      publicPath: '/',     // <--- DEFINE A ROTA RAIZ DOS ASSETS
       cssMinify: 'esbuild',
 
       target: {},
