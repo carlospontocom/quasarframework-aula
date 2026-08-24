@@ -15,11 +15,20 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" bordered>
       <q-list>
 
 
         <q-item-label header> Navegação </q-item-label>
+
+        <!-- Link para Home -->
+        <EssentialLink
+          title="Home"
+          icon="home"
+          to="/"
+        />
+
+        <q-separator />
  
         <!-- Menu Expansível: listaTelefonica -->
         <q-expansion-item
@@ -40,9 +49,7 @@
           />
         </q-expansion-item>
 
-                <q-separator />
-
-
+        <q-separator /> 
         <!-- Menu Expansível: lista telefonica -->
        <q-expansion-item
   icon="phone"
@@ -112,15 +119,27 @@
     class="space__left"
   />
 </q-expansion-item>
-        <q-separator />
 
 
+
+<q-separator />
  
         <EssentialLink
           v-for="link in linksList"
           :key="link.title"
           v-bind="link"
         />
+
+<q-separator />
+
+<!-- Link para a Documentação Interna -->
+<EssentialLink
+  title="Documentação"
+  caption="Guia de uso do sistema"
+  icon="help_outline"
+  to="/documentacao"
+/> 
+
       </q-list>
     </q-drawer>
 
