@@ -18,7 +18,8 @@
     "vue-router": "^5.0.6"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^3.0.0"
+    "@quasar/app-vite": "^3.0.0",
+    "detect-libc": "^2.1.2"
   },
   "keywords": [
     "quasar",
