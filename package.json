@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@quasar/app-vite": "^3.0.0",
-    "detect-libc": "^2.1.2"
+    "detect-libc": "^2.1.2",
+    "lightningcss-linux-x64-gnu": "^1.33.0"
   },
   "keywords": [
     "quasar",
