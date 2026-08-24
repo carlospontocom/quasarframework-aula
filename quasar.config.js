@@ -20,7 +20,7 @@ export default defineConfig(() => {
 
       filenameBasedRouting: true,
 
-      vueRouterMode: 'hash',
+      vueRouterMode: 'history',
 
       extendViteConf(viteConf) {
         viteConf.css.preprocessorOptions.sass.api = 'legacy'
