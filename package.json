@@ -1,9 +1,9 @@
 {
   "name": "app-vite-v3",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "Projeto para desenvolvimento com quasar vue, API",
   "productName": "Quasar App",
-  "author": "Razvan Stoenescu <razvan.stoenescu@gmail.com>",
+  "author": "Carlos Nascimento",
   "type": "module",
   "private": true,
   "scripts": {

@@ -11,15 +11,17 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>QVue</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <!-- Menu Expansível: Usuários -->
+
+
+        <q-item-label header> Navegação </q-item-label>
+ 
+        <!-- Menu Expansível: listaTelefonica -->
         <q-expansion-item
           icon="people"
           label="Usuários"
@@ -34,15 +36,86 @@
             title="Gerenciar Usuários"
             icon="manage_accounts"
             to="/GerenciarUsuario"
-                        class="space__left"
-
+            class="space__left"
           />
         </q-expansion-item>
 
+                <q-separator />
+
+
+        <!-- Menu Expansível: lista telefonica -->
+       <q-expansion-item
+  icon="phone"
+  label="Telefonia"
+>
+  <EssentialLink
+    title="Lista telefônica"
+    icon="contact_phone"
+    to="/NovoUsuario"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Adm lista telefônica"
+    icon="admin_panel_settings"
+    to="/NovoUsuario"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Enviar e-mail"
+    icon="send"
+    to="/GerenciarUsuario"
+    class="space__left"
+  />
+</q-expansion-item>
+
+        
         <q-separator />
 
-        <q-item-label header> Essential Links </q-item-label>
+        <q-expansion-item
+  icon="account_balance_wallet"
+  label="Finanças Pessoais"
+>
+  <EssentialLink
+    title="Visão Geral / Dashboard"
+    icon="dashboard"
+    to="/financas/dashboard"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Receitas e Despesas"
+    icon="swap_horiz"
+    to="/financas/transacoes"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Contas e Cartões"
+    icon="credit_card"
+    to="/financas/contas"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Categorias"
+    icon="category"
+    to="/financas/categorias"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Metas e Investimentos"
+    icon="trending_up"
+    to="/financas/metas"
+    class="space__left"
+  />
+  <EssentialLink
+    title="Relatórios"
+    icon="bar_chart"
+    to="/financas/relatorios"
+    class="space__left"
+  />
+</q-expansion-item>
+        <q-separator />
 
+
+ 
         <EssentialLink
           v-for="link in linksList"
           :key="link.title"
@@ -63,29 +136,11 @@ import EssentialLink from '@/components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev"
-  },
-  {
     title: "Github",
-    caption: "github.com/quasarframework",
+    caption: "Carlos - repositório",
     icon: "code",
-    link: "https://github.com/quasarframework"
+    link: "https://github.com/carlospontocom/quasarframework-aula"
   },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev"
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev"
-  }
 ]
 
 const leftDrawerOpen = ref(false)
