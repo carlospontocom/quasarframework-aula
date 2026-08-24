@@ -19,6 +19,28 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
+        <!-- Menu Expansível: Usuários -->
+        <q-expansion-item
+          icon="people"
+          label="Usuários"
+         >
+          <EssentialLink
+            title="Novo Usuário"
+            icon="person_add"
+            to="/NovoUsuario"
+            class="space__left"
+          />
+          <EssentialLink
+            title="Gerenciar Usuários"
+            icon="manage_accounts"
+            to="/GerenciarUsuario"
+                        class="space__left"
+
+          />
+        </q-expansion-item>
+
+        <q-separator />
+
         <q-item-label header> Essential Links </q-item-label>
 
         <EssentialLink
@@ -41,46 +63,28 @@ import EssentialLink from '@/components/EssentialLink.vue'
 
 const linksList = [
   {
-    label: "Docs",
+    title: "Docs",
     caption: "quasar.dev",
     icon: "school",
     link: "https://quasar.dev"
   },
   {
-    label: "Github",
+    title: "Github",
     caption: "github.com/quasarframework",
     icon: "code",
     link: "https://github.com/quasarframework"
   },
   {
-    label: "Discord Chat Channel",
+    title: "Discord Chat Channel",
     caption: "chat.quasar.dev",
     icon: "chat",
     link: "https://chat.quasar.dev"
   },
   {
-    label: "Forum",
+    title: "Forum",
     caption: "forum.quasar.dev",
     icon: "record_voice_over",
     link: "https://forum.quasar.dev"
-  },
-  {
-    label: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev"
-  },
-  {
-    label: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev"
-  },
-  {
-    label: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev"
   }
 ]
 
@@ -90,3 +94,17 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
+
+<style scoped>
+:deep(.q-item__section--avatar) {
+  margin:0;
+  padding:0;
+  min-width:35px;
+}
+</style>
+
+<style scoped>
+.space__left{
+  margin: 0 0 0 1.3rem;
+}
+</style>
