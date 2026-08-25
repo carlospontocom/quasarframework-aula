@@ -77,10 +77,9 @@
   />
 </q-expansion-item>
 
-        
-        <q-separator />
+<q-separator />
 
-        <q-expansion-item
+ <q-expansion-item
   icon="account_balance_wallet"
   label="Finanças Pessoais"
 >
@@ -121,16 +120,18 @@
     class="space__left"
   />
 </q-expansion-item>
-        <q-separator />
-
-
  
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+ <q-separator />
+
+  <EssentialLink
+    v-for="link in linksList"
+    :key="link.title"
+    v-bind="link"
+  />
+
+
+    </q-list>
+
     </q-drawer>
 
     <q-page-container>
