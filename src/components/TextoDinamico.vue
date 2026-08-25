@@ -1,10 +1,19 @@
 <template>
-    <h1>{{titulo}}</h1>
-    <slot/>
+   
+   <component :is="as">
+        {{texto}}
+   </component>
+
 </template>
 
 <script setup>
+
+    import '@/css/textos.scss';
+
     const props = defineProps ({
-        titulo:String
+        texto:String,
+        as: {
+            type:String
+        }
     })
 </script>
