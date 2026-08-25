@@ -1,6 +1,7 @@
 <template>
-
-<h1>
-Novo usuario
-</h1>
+    <TextoDinamico titulo = "ok"/>
 </template>
+
+<script setup>
+
+</script>
